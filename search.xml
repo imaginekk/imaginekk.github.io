@@ -17,9 +17,12 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+      <tags>
+        <tag>其他</tag>
+      </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>Monitor</title>
     <url>/2023/07/28/JUC/</url>
     <content><![CDATA[<h2 id="Monitor-概念"><a href="#Monitor-概念" class="headerlink" title="Monitor 概念"></a>Monitor 概念</h2><h3 id="Java-对象头"><a href="#Java-对象头" class="headerlink" title="Java 对象头"></a>Java 对象头</h3><p>以 32 位虚拟机为例</p>
 <p>普通对象</p>
@@ -144,5 +147,8 @@
 <h4 id="撤销-调用-wait-notify"><a href="#撤销-调用-wait-notify" class="headerlink" title="撤销 - 调用 wait&#x2F;notify"></a>撤销 - 调用 wait&#x2F;notify</h4><h4 id="批量重偏向"><a href="#批量重偏向" class="headerlink" title="批量重偏向"></a>批量重偏向</h4><p>如果对象虽然被多个线程访问，但没有竞争，这时偏向了线程 T1 的对象仍有机会重新偏向 T2，重偏向会重置对象的 Thread ID<br>当撤销偏向锁阈值超过 20 次后，jvm 会这样觉得，我是不是偏向错了呢，于是会在给这些对象加锁时重新偏向至加锁线程</p>
 <h4 id="批量撤销"><a href="#批量撤销" class="headerlink" title="批量撤销"></a>批量撤销</h4><p>当撤销偏向锁阈值超过 40 次后，jvm 会这样觉得，自己确实偏向错了，根本就不该偏向。于是整个类的所有对象都会变为不可偏向的，新建的对象也是不可偏向的</p>
 ]]></content>
+      <tags>
+        <tag>JUC</tag>
+      </tags>
   </entry>
 </search>
