@@ -312,7 +312,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2023/08/01/%E4%B8%80%E6%9D%A1SQL%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%89%A7%E8%A1%8C/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2023/08/01/%E4%B8%80%E6%9D%A1SQL%E8%AF%AD%E5%8F%A5%E7%9A%84%E6%89%A7%E8%A1%8C/" itemprop="url">一条SQL语句的执行过程</a></h1>
         
 
         <div class="post-meta">
@@ -334,6 +334,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -368,7 +390,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2.7k
+                  3k
                 </span>
               
 
@@ -384,7 +406,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  10 mins.
+                  11 mins.
                 </span>
               
             </span>
@@ -408,15 +430,9 @@
         
           
           一条SQL语句的执行过程
-
-连接器
-
-连接器主要和身份认证和权限相关的功能相关，就好比一个级别很高的门卫一样。
+1. 连接器连接器主要和身份认证和权限相关的功能相关，就好比一个级别很高的门卫一样。
 主要负责用户登录数据库，进行用户的身份认证，包括校验账户密码，权限等操作，如果用户账户密码已通过，连接器会到权限表中查询该用户的所有权限，之后在这个连接里的权限逻辑判断都是会依赖此时读取到的权限数据，也就是说，后续只要这个连接不断开，即使管理员修改了该用户的权限，该用户也是不受影响的。
-
-查询缓存(MySQL 8.0 版本后移除)
-
-查询缓存主要用来缓存我们所执行的 SELECT 语句以及该语句的结果集。
+2. 查询缓存(MySQL 8.0 版本后移除)查询缓存主要用来缓存我们所执行的 SELECT 语句以及该语句的结果集。
 连接建立后，执行查询语句的时候，会先查询缓存，MySQL 会先校验这个 SQL
           ...
           <!--noindex-->
@@ -1064,7 +1080,7 @@ Run server1$ hexo ser
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1075,7 +1091,7 @@ Run server1$ hexo ser
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
